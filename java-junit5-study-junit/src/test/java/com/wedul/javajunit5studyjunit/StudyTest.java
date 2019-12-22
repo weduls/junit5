@@ -28,6 +28,7 @@ class StudyTest {
       */
     @Test
     @DisplayName("assert all 테스트")
+    @Tag("fast")
     void assert_all_test() {
         Study study = new Study();
 
@@ -40,6 +41,7 @@ class StudyTest {
 
     @Test
     @DisplayName("assert study")
+    @Tag("slow")
     void assert_etc_test() {
         // 에러 여부 확인
         assertThrows(IllegalArgumentException.class, () -> new Study(-1));
