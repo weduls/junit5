@@ -7,6 +7,18 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Study {
 
+    private long studyId;
+
+    public Study(long studyId) {
+        this.studyId = studyId;
+    }
+
+    public Study(long studyId, StudyStatus status, int limit) {
+        this.studyId = studyId;
+        this.status = status;
+        this.limit = limit;
+    }
+
     public Study(int limit, StudyStatus status) {
         validate(limit);
         this.limit = limit;
