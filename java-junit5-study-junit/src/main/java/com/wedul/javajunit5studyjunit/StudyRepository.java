@@ -29,4 +29,8 @@ public class StudyRepository {
             .findFirst().orElse(null);
     }
 
+    public void validate() {
+
+    }
+
 }
