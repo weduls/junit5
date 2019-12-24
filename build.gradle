@@ -49,6 +49,16 @@ subprojects {
 		compileOnly 'org.projectlombok:lombok'
 		annotationProcessor 'org.projectlombok:lombok'
 
+		compile('org.springframework.boot:spring-boot-starter-data-jpa')
+		compile ('mysql:mysql-connector-java')
+
+		// test용 h2
+		compile('com.h2database:h2')
+		testCompile('com.h2database:h2')
+
+		testCompile "org.testcontainers:testcontainers:1.12.4"
+		testCompile "org.testcontainers:junit-jupiter:1.12.4"
+		testCompile "org.testcontainers:mysql:1.12.4"
 		implementation 'org.springframework.boot:spring-boot-starter'
 		testImplementation('org.springframework.boot:spring-boot-starter-test') {
 			exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
