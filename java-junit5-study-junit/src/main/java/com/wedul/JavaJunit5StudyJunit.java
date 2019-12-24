@@ -1,5 +1,6 @@
 package com.wedul;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
@@ -10,4 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  **/
 @SpringBootApplication
 public class JavaJunit5StudyJunit {
+    public static void main(String[] args){
+        SpringApplication.run(JavaJunit5StudyJunit.class, args);
+    }
 }

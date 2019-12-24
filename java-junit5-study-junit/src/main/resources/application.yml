@@ -1,0 +1,15 @@
+spring:
+    datasource:
+        username: wedul_dev
+        password: dbsafer00
+        initialization-mode: always
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=yes&characterEncoding=utf8&autoReconnect=
+        dbcp2:
+            validation-query: SELECT 1
+
+    jpa:
+        properties:
+            hibernate:
+                show_sql: true
+                format_sql: true
