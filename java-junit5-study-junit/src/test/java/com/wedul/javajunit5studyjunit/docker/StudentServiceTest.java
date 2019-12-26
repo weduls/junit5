@@ -10,11 +10,13 @@ import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
-import org.testcontainers.containers.MySQLContainer;
+import org.testcontainers.containers.DockerComposeContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
 import javax.transaction.Transactional;
+import java.io.File;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 /**
@@ -32,17 +34,18 @@ class StudentServiceTest {
     @Autowired
     StudentService studentService;
 
-    @Container
-    static MySQLContainer mySQLContainer = new MySQLContainer();
+    @Value("${container.port}")
+    private int port;
 
-    @Value("${container.databaseName}")
-    private String databaseName;
+    @Container
+    static DockerComposeContainer composeContainer =
+        new DockerComposeContainer(new File("src/test/resources/docker-compose.yml"))
+        .withExposedService("mysql", 3306);
 
     @Test
     @DisplayName("학생 추가하기")
     @Transactional
     void create_student_test() {
-        System.out.println(databaseName);
         studentService.createStudent(Student.builder()
             .studentId(2L)
             .age(10)
@@ -56,14 +59,15 @@ class StudentServiceTest {
     @Test
     @Transactional
     void find_student_test() {
+        System.out.println(port);
         studentService.createStudent(Student.builder()
-            .studentId(2L)
             .age(10)
             .name("wedul")
             .address("seoul jamsil")
             .studentNickname("duri")
             .build()
         );
+        List<Student> studentList = studentService.getStudentList();
         Student student = studentService.getStudent(1L);
         assertThat(student).isNotNull();
     }
@@ -72,7 +76,7 @@ class StudentServiceTest {
 
         @Override
         public void initialize(ConfigurableApplicationContext applicationContext) {
-            TestPropertyValues.of("container.databaseName=" + mySQLContainer.getDatabaseName())
+            TestPropertyValues.of("container.port=" + composeContainer.getServicePort("mysql", 3306))
                 .applyTo(applicationContext.getEnvironment());
         }
     }

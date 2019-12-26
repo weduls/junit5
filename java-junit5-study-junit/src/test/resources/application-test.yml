@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:tc:mysql:5.7.22://localhost:3306/test
+    url: jdbc:tc:mysql:5.7.22://localhost/test
     driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
 
     dbcp2:

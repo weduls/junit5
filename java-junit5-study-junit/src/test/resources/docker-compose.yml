@@ -1,12 +1,11 @@
 version: '3.1'
 
 services:
-  maria:
+  mysql:
     image: mariadb:latest
-    container_name: "mariadb-test"
     restart: "always"
     ports:
-    - "13306:3306"
+    - "3306"
     environment:
       - MYSQL_ROOT_PASSWORD=dbsafer00
       - MYSQL_DATABASE=test
