@@ -52,6 +52,9 @@ subprojects {
 		compile('org.springframework.boot:spring-boot-starter-data-jpa')
 		compile ('mysql:mysql-connector-java')
 
+		compile group: 'de.codecentric', name: 'chaos-monkey-spring-boot', version: '2.1.1'
+		compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.2.2.RELEASE'
+
 		// test용 h2
 		compile('com.h2database:h2')
 		testCompile('com.h2database:h2')

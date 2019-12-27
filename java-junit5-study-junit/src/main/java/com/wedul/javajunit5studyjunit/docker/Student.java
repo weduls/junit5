@@ -1,6 +1,7 @@
 package com.wedul.javajunit5studyjunit.docker;
 
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ import javax.persistence.*;
  * @since 2019/12/24
  **/
 @Entity(name = "student")
+@Getter
 @NoArgsConstructor
 public class Student {
 
@@ -22,14 +24,14 @@ public class Student {
     private String address;
     private String name;
     private int age;
-    private String studentNickname;
+    private String studentNickName;
 
     @Builder
-    public Student(long studentId, String address, String name, int age, String studentNickname) {
+    public Student(long studentId, String address, String name, int age, String studentNickName) {
         this.studentId = studentId;
         this.address = address;
         this.name = name;
         this.age = age;
-        this.studentNickname = studentNickname;
+        this.studentNickName = studentNickName;
     }
 }

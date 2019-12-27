@@ -1,10 +1,26 @@
 spring:
+    profiles:
+        active: chaos-monkey
+
+chaos:
+    monkey:
+        watcher:
+            repository: true
+            
+management:
+    endpoint:
+        chaosmonkey:
+            enabled: true
+    endpoints:
+        web:
+            exposure:
+                include: health,info,chaosmonkey
     datasource:
         username: wedul_dev
         password: dbsafer00
         initialization-mode: always
-        driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=yes&characterEncoding=utf8&autoReconnect=
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=yes&characterEncoding=utf8
         dbcp2:
             validation-query: SELECT 1
 
