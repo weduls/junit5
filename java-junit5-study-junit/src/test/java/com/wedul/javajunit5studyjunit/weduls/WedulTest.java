@@ -1,5 +1,6 @@
-package com.wedul.javajunit5studyjunit.wedul;
+package com.wedul.javajunit5studyjunit.weduls;
 
+import com.wedul.javajunit5studyjunit.weduls.domain.Wedul;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -7,13 +8,9 @@ import org.junit.jupiter.params.aggregator.AggregateWith;
 import org.junit.jupiter.params.aggregator.ArgumentsAccessor;
 import org.junit.jupiter.params.aggregator.ArgumentsAggregationException;
 import org.junit.jupiter.params.aggregator.ArgumentsAggregator;
-import org.junit.jupiter.params.converter.ArgumentConversionException;
-import org.junit.jupiter.params.converter.ConvertWith;
-import org.junit.jupiter.params.converter.SimpleArgumentConverter;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.Mock;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.stream.Stream;
 

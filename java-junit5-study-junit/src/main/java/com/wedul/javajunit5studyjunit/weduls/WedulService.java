@@ -1,7 +1,7 @@
-package com.wedul.javajunit5studyjunit.wedul;
+package com.wedul.javajunit5studyjunit.weduls;
 
+import com.wedul.javajunit5studyjunit.weduls.domain.Wedul;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**

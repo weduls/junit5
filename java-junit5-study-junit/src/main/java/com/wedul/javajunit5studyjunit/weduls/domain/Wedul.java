@@ -1,6 +1,5 @@
-package com.wedul.javajunit5studyjunit.wedul;
+package com.wedul.javajunit5studyjunit.weduls.domain;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

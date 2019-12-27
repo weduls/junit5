@@ -2,4 +2,7 @@ bootJar { enabled = true }
 jar { enabled = false }
 
 dependencies {
+    // arch unit 테스트
+    testCompile 'com.tngtech.archunit:archunit-junit5-api:0.12.0'
+    testRuntime 'com.tngtech.archunit:archunit-junit5-engine:0.12.0'
 }

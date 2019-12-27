@@ -1,4 +1,4 @@
-package com.wedul.javajunit5studyjunit.wedul;
+package com.wedul.javajunit5studyjunit.weduls;
 
 /**
  * java-junit5-study
@@ -7,6 +7,7 @@ package com.wedul.javajunit5studyjunit.wedul;
  * @since 2019/12/23
  **/
 
+import com.wedul.javajunit5studyjunit.weduls.domain.Wedul;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

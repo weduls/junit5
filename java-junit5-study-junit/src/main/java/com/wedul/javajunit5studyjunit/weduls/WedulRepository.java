@@ -1,5 +1,6 @@
-package com.wedul.javajunit5studyjunit.wedul;
+package com.wedul.javajunit5studyjunit.weduls;
 
+import com.wedul.javajunit5studyjunit.weduls.domain.Wedul;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;

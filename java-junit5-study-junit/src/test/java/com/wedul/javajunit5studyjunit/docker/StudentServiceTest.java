@@ -64,7 +64,7 @@ class StudentServiceTest {
             .age(10)
             .name("wedul")
             .address("seoul jamsil")
-            .studentNickname("duri")
+            .studentNickName("duri")
             .build()
         );
         List<Student> studentList = studentService.getStudentList();

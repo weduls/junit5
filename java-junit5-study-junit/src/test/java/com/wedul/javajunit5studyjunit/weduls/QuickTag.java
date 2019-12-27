@@ -1,4 +1,4 @@
-package com.wedul.javajunit5studyjunit.wedul;
+package com.wedul.javajunit5studyjunit.weduls;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;

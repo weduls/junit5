@@ -6,7 +6,7 @@ chaos:
     monkey:
         watcher:
             repository: true
-            
+
 management:
     endpoint:
         chaosmonkey:
