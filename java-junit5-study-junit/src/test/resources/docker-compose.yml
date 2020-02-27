@@ -7,7 +7,7 @@ services:
     ports:
     - "3306"
     environment:
-      - MYSQL_ROOT_PASSWORD=dbsafer00
+      - MYSQL_ROOT_PASSWORD=wedul00
       - MYSQL_DATABASE=test
       - MYSQL_USER=wedul_dev
-      - MYSQL_PASSWORD=dbsafer00
+      - MYSQL_PASSWORD=wedul00
