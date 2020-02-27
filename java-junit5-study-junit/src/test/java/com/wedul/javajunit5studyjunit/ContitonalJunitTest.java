@@ -27,7 +27,7 @@ public class ContitonalJunitTest {
         assumeTrue("dev".equalsIgnoreCase(profile));
 
         // assumingTest를 통해 특정 조건이 가능했을 때, 다음파라미터의 테스트 가능
-        assumingThat("dbafer".equals("dbsafer"), () -> {
+        assumingThat("wedul".equals("wedul"), () -> {
             assertThat(study.getLimit()).isEqualTo(0);
         });
 
